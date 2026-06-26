@@ -55,23 +55,23 @@ def trademark(main):
 def user_request():
     prompt = input(("\nWould you like to use the tool again? (yes/no): "))
     if prompt == "yes":
-        os.system('clear')
+        os.system('cls' if os.name == 'nt' else 'clear')
         eye_art()
         main()
     elif prompt == "no":
-        os.system('clear');
+        os.system('cls' if os.name == 'nt' else 'clear');
         text = "Blessed Is The Sacred Raven's Eye, And Blessed Are Those Who Know How To Wield Its Power."
         for char in text:
             sys.stdout.write(purple(char))
             sys.stdout.flush()
             time.sleep(0.05)
-        os.system('clear');
+        os.system('cls' if os.name == 'nt' else 'clear');
         os._exit(0);
     else:
-        os.system('clear')
+        os.system('cls' if os.name == 'nt' else 'clear')
         print(red("Invalid input"))
         time.sleep(3)
-        os.system('clear')
+        os.system('cls' if os.name == 'nt' else 'clear')
         user_request()
 
 def resolve(hostname):
@@ -133,18 +133,18 @@ def main():
         time.sleep(3)
         user_request()
     elif choice == '3':
-        os.system('clear');
+        os.system('cls' if os.name == 'nt' else 'clear');
         text = "Blessed Is The Sacred Raven's Eye, And Blessed Are Those Who Know How To Wield Its Power."
         for char in text:
             sys.stdout.write(purple(char))
             sys.stdout.flush()
             time.sleep(0.05)
-        os.system('clear');
+        os.system('cls' if os.name == 'nt' else 'clear');
         os._exit(0);
     else:
         print(red(bold("Invalid choice. Please try again.")))
         time.sleep(3)
-        os.system('clear')
+        os.system('cls' if os.name == 'nt' else 'clear')
         eye_art()
         main();
 main();
