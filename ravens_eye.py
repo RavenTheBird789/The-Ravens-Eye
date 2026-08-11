@@ -120,7 +120,7 @@ def port_scan():
 
     print("-" * 50)
     print("Pecking complete.")
-    print(f"A total of {ports_open} open ports chirpped from being pecked.")
+    print(f"A total of {ports_open} open ports chirped from being pecked.")
     print(f"Open ports: {open_ports}")
     
 @trademark
