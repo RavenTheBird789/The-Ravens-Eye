@@ -77,9 +77,9 @@ def user_request():
 def resolve(hostname):
     try:
         ip = socket.gethostbyname(hostname)
-        return f"[+] IP Address Resolved From Pecking Hostname: {ip}"
+        return f"[+] IP Address that chirped from pecking hostname: {ip}"
     except socket.gaierror as e:
-        return f"[-] Couldn't resolve {hostname}: {e}"
+        return f"[-] {hostname} didn't chirp from being pecked: {e}"
 
 def scan_port(target_host, port):
     """Attempts to connect to a specific TCP port. Returns the port number if open, otherwise None."""
@@ -99,7 +99,7 @@ def port_scan():
     try:
         target_ip = socket.gethostbyname(target_host)
     except socket.gaierror:
-        print(f"[-] Hostname '{target_host}' could not be resolved.")
+        print(f"[-] Hostname '{target_host}' didn't chirp from being pecked.")
         sys.exit()
 
     print("-" * 50)
