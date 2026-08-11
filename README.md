@@ -6,10 +6,6 @@ Python script for a hostname resolver and a port scanner for a given hostname fr
 Requirements:
 * Ensure the latest version of python is installed in your terminal (python 3.x)
 
-Key Features:
-* Resolution of hostnames
-* Port scanning of hostnames
-
 Key Terminology:
 * Pecking - When the software is actively performing a port scan or resolving a hostname
 * Chirping - When the act of port scanning results in the discovery of open ports or resolving a hostname is successful
