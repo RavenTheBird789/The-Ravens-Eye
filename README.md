@@ -1,6 +1,8 @@
 # The-Ravens-Eye
 Python script for a hostname resolver and a port scanner for a given hostname from the end-user
 
+![Alt text](images/Screenshot_20260809_185156_Termux.jpg)
+
 Requirements:
 * Ensure the latest version of python is installed in your terminal
 
