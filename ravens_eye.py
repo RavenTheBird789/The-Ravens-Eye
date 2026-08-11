@@ -69,7 +69,7 @@ def user_request():
         os._exit(0);
     else:
         os.system('cls' if os.name == 'nt' else 'clear')
-        print(red("Invalid input"))
+        print(red("Invalid Input"))
         time.sleep(3)
         os.system('cls' if os.name == 'nt' else 'clear')
         user_request()
@@ -77,7 +77,7 @@ def user_request():
 def resolve(hostname):
     try:
         ip = socket.gethostbyname(hostname)
-        return f"[+] IP Address Resolved For Hostname: {ip}"
+        return f"[+] IP Address Resolved From Pecking Hostname: {ip}"
     except socket.gaierror as e:
         return f"[-] Couldn't resolve {hostname}: {e}"
 
@@ -103,8 +103,8 @@ def port_scan():
         sys.exit()
 
     print("-" * 50)
-    print(f"Scanning Target: {target_ip}")
-    print(f"Scanning Ports : {start_port} to {end_port}")
+    print(f"Pecking Target: {target_ip}")
+    print(f"Pecking Ports : {start_port} to {end_port}")
     print("-" * 50)
 
     open_ports = []
@@ -114,10 +114,14 @@ def port_scan():
     with ThreadPoolExecutor(max_workers=100) as executor:
         results = executor.map(lambda p: scan_port(target_ip, p), ports_to_scan)
         open_ports = [port for port in results if port is not None]
+        ports_open = 0
+        for ports_open in open_ports:
+            ports_open += 1
 
     print("-" * 50)
-    print("Scan complete.")
-    print(f"Open ports found: {open_ports}")
+    print("Pecking complete.")
+    print(f"A total of {ports_open} open ports chirpped from being pecked.")
+    print(f"Open ports: {open_ports}")
     
 @trademark
 def main():
