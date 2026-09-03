@@ -18,4 +18,4 @@ Note:
 * If the input fields for the start and end ports are empty the default values for the port scan with be 1 and 1024 respectively
 
 Updates:
-* Built-in python os library utilized to document findings from both resolving hostnames and port scanning processes locally
+* Built-in python os library utilized to document findings from both resolving hostnames (or IP Addresses) and port scanning processes locally
