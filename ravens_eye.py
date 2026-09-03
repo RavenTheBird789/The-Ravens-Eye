@@ -116,6 +116,13 @@ def port_scan():
         target_ip = socket.gethostbyname(target_host)
     except socket.gaierror:
         print(red(f"[-] Hostname '{target_host}' didn't chirp from being pecked."))
+        file_num = 1
+        while os.path.exists(f"port_scan{file_num}.txt"):
+                file_num += 1
+        file_name = f"failed_port_scan{file_num}.txt"
+        with open(file_name, "w") as fps:
+            print(f"[-] Hostname '{target_host}' didn't chirp from being pecked.", file=fps)
+        print(f'This information has been saved as "failed_port_scan{file_num}.txt"')
         return
 
     print("-" * 50)

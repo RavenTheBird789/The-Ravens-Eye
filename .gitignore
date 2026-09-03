@@ -220,3 +220,4 @@ __marimo__/
 # Text Files
 port_scan[0-9]*.txt
 hostname_ip[0-9]*.txt
+failed_port_scan[0-9]*.txt
