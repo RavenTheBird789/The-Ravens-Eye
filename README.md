@@ -1,5 +1,5 @@
 # The-Ravens-Eye 🐦‍⬛🧿
-Python script for a hostname resolver and a port scanner for a given hostname from the end-user
+Python script for a hostname resolver and a port scanner for a given hostname or IP Address from the end-user
 
 ![Alt text](Images/Screenshot_20260902_121242_Termux.jpg)
 
