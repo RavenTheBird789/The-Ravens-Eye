@@ -221,3 +221,4 @@ __marimo__/
 port_scan[0-9]*.txt
 hostname_ip[0-9]*.txt
 failed_port_scan[0-9]*.txt
+failed_hostname_ip[0-9]*.txt

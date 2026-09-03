@@ -90,9 +90,9 @@ def resolve(hostname):
         return green(f'[+] IP Address that chirped from pecking hostname: {ip}\nThis information has been saved as "{filename}"')
     except socket.gaierror as e:
         file_num = 1
-        while os.path.exists(f"hostname_ip{file_num}.txt"):
+        while os.path.exists(f"failed_hostname_ip{file_num}.txt"):
                 file_num += 1
-        filename = f"hostname_ip{file_num}.txt"
+        filename = f"failed_hostname_ip{file_num}.txt"
         with open(filename, "w") as hfr:
             print(f"{hostname} failed to resolve an IP Address because of the following error: {e}", file=hfr)
         return red(f'[-] {hostname} did not chirp from being pecked: {e}\nThis information has been saved as "{filename}"')
