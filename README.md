@@ -6,6 +6,11 @@ Python script for a hostname resolver and a port scanner for a given hostname or
 Requirements:
 * Ensure the latest version of python is installed in your terminal (python 3.x)
 
+Recommendations:
+* Use a VPN while using this tool (Proton or Mullvad are encouraged)
+* Enable TOR in your terminal
+* Run proxychains4 while executing the software (This comes pre-installed with Kali-Linux)
+
 Key Terminology:
 * Pecking - When the software is actively performing a port scan or resolving a hostname
 * Chirping - When the act of port scanning results in the discovery of open ports or resolving a hostname is successful
