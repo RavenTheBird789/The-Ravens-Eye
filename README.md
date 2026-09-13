@@ -29,6 +29,18 @@ Global Execution (Optional)
   6. Reload your terminal config using "source ~/.bashrc" (or ~/.zshrc)
   7. Type "ravenseye" from anywhere to run the program
 
+* For Windows
+  1. Make sure Python is added to your PATH (check by typing "python --version" in Command Prompt. If it shows a version number, you're set)
+  2. Create a folder to hold your global scripts, such as "C:\Scripts" (You can make this anywhere, just don't forget the path)
+  3. Copy "ravens_eye.py" into that folder and rename the copy "ravenseye.py"
+  4. In the same folder, create a new text file named "ravenseye.bat"
+  5. Open "ravenseye.bat" in Notepad and add this single line "@python "%~dp0ravenseye.py" %*"
+  6. Save and close the file
+  7. Add your folder to your PATH: press the Windows key, search "Environment Variables", click "Edit the system environment variables", click "Environment Variables", under "User variables" select "Path", click "Edit", click "New", then paste in your folder path (e.g. "C:\Scripts")
+  8. Click OK on all the windows to save
+  9. Close and reopen Command Prompt or Powershell
+  10. Type "ravenseye" from anywhere to run the program
+
 Note:
 * If the input fields for the start and end ports are empty the default values for the port scan with be 1 and 1024 respectively
 
