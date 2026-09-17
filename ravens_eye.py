@@ -137,9 +137,7 @@ def port_scan():
     with ThreadPoolExecutor(max_workers=100) as executor:
         results = executor.map(lambda p: scan_port(target_ip, p), ports_to_scan)
         open_ports = [port for port in results if port is not None]
-        ports_open = 0
-        for ports_open in open_ports:
-            ports_open += 1
+        ports_open = len(open_ports)
 
     print("-" * 50)
     print("Pecking complete.")
