@@ -110,7 +110,7 @@ def scan_port(target_host, port):
     
 def port_scan():
     target_host = input("Enter the target hostname or IP Address: ")
-    start_port = int(input("Start port: ") or 1)
+    start_port = int(input("Start port: ") or 0)
     end_port = int(input("End Port: ") or 1024)
     try:
         target_ip = socket.gethostbyname(target_host)
