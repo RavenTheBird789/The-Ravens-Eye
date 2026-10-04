@@ -1,4 +1,4 @@
-# The-Ravens-Eye 🐦‍⬛🧿
+# The Ravens Eye 🐦‍⬛🧿
 Hostname resolver and a port scanner for a given hostname or IP Address from the end-user
 
 ![Alt text](Images/Screenshot_20260902_121242_Termux.jpg)
