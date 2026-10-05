@@ -15,9 +15,23 @@ Key Terminology:
 * Pecking - When the software is actively performing a port scan or resolving a hostname
 * Chirping - When the act of port scanning results in the discovery of open ports or resolving a hostname is successful
 
-Installation & Execution:
-* To install, simply type "git clone https://github.com/RavenTheBird789/The-Ravens-Eye" in your terminals command line
-* To run, simply type "python3 ravens_eye.py" in your terminals command line or use the alias command to create a shortcut to run the program in your terminal such as "alias run="python3 ravens_eye.py""
+Installation
+
+```bash
+git clone https://github.com/RavenTheBird789/The-Ravens-Eye
+```
+
+To run
+
+```bash
+python3 ravens_eye.py
+```
+
+Optional shortcut
+
+```bash
+alias run="python3 ravens_eye.py"
+```
 
 Global Execution (Optional)
 * Alternatively, you can run the program globally by simply typing "ravenseye" from anywhere in your terminal, follow these steps (For macOS and Linux):
