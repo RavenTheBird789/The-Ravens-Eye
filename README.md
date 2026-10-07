@@ -30,7 +30,7 @@ python3 ravens_eye.py
 Optional shortcut
 
 ```bash
-alias run="python3 ravens_eye.py"
+alias raven="python3 ravens_eye.py"
 ```
 
 Global Execution (Optional)
