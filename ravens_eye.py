@@ -157,7 +157,7 @@ def port_scan():
     
 @trademark
 def main():
-    choice = input(purple("Enter your choice (1-3): "))
+    choice = input(purple("\nEnter your choice (1-3): ")).strip()
     if choice == '1':
         os.system('cls' if os.name == 'nt' else 'clear')
         hostname = input("Enter the hostname: ").strip()
