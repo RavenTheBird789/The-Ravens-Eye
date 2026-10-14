@@ -104,7 +104,7 @@ def scan_port(target_host, port):
         # connect_ex returns 0 if the connection succeeded, or an error code if it failed
         result = s.connect_ex((target_host, port))
         if result == 0:
-            print(f"[+] Port {port} is OPEN")
+            print(green(f"[+] Port {port} is OPEN"))
             return port
     return None
     
