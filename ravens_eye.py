@@ -58,7 +58,7 @@ def trademark(main):
     return wrapper
 
 def user_request():
-    prompt = input(("\nWould you like to use the tool again? (yes/no): "))
+    prompt = input(purple("\nWould you like to use the tool again? (yes/no): "))
     if prompt == "yes":
         os.system('cls' if os.name == 'nt' else 'clear')
         main()
@@ -122,7 +122,7 @@ def port_scan():
         file_name = f"failed_port_scan{file_num}.txt"
         with open(file_name, "w") as fps:
             print(f"[-] Hostname '{target_host}' didn't chirp from being pecked.", file=fps)
-        print(f'This information has been saved as "failed_port_scan{file_num}.txt"')
+        print(red(f'This information has been saved as "failed_port_scan{file_num}.txt"'))
         return
 
     print("-" * 50)
@@ -153,7 +153,7 @@ def port_scan():
     with open(file_name, "w") as ps:
         print(f"There are a total of {ports_open} Open Ports for {target_host} at {target_ip}\nThis is within the range of Ports {start_port} to {end_port}\nThe Open Ports are as follows: {open_ports}", file=ps)
 
-    print(f'This information has been saved as "port_scan{file_num}.txt"')
+    print(green(f'This information has been saved as "port_scan{file_num}.txt"'))
     
 @trademark
 def main():
