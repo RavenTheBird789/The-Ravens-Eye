@@ -3,6 +3,7 @@ import socket
 import time
 import os
 import sys
+import glob
 from concurrent.futures import ThreadPoolExecutor
 
 # List of ANSI color codes
@@ -53,7 +54,8 @@ def trademark(main):
         print(purple("Please select an option:"))
         print(purple("1. Resolve A Hostname"))
         print(purple("2. Port Scan Of A Given Hostname or IP Address"))
-        print(purple("3. Exit"))
+        print(purple("3. Delete All Documentation"))
+        print(purple("4. Exit"))
         main()
     return wrapper
 
@@ -82,7 +84,7 @@ def resolve(hostname):
     try:
         ip = socket.gethostbyname(hostname)
         file_num = 1
-        while os.path.exists(f"hostname_ip{file_num}.txt"):
+        while os.path.exists(f"{file_num}.txt"):
                 file_num += 1
         filename = f"hostname_ip{file_num}.txt"
         with open(filename, "w") as hip:
@@ -154,6 +156,26 @@ def port_scan():
         print(f"There are a total of {ports_open} Open Ports for {target_host} at {target_ip}\nThis is within the range of Ports {start_port} to {end_port}\nThe Open Ports are as follows: {open_ports}", file=ps)
 
     print(green(f'This information has been saved as "port_scan{file_num}.txt"'))
+
+def del_all():
+    prefixes = ["port_scan", "failed_port_scan", "hostname_ip", "failed_hostname_ip"]
+    suffix = ".txt"
+    
+    deleted_any = False
+
+    for prefix in prefixes:
+        pattern = f"{prefix}[0-9]*{suffix}"
+        
+        for file_path in glob.glob(pattern):
+            if os.path.isfile(file_path):
+                print(f"Deleting {file_path}...")
+                os.remove(file_path)
+                deleted_any = True
+
+    if not deleted_any:
+        print(red("No matching files found to delete."))
+    else:
+        print(green("All matching files have been deleted."))
     
 @trademark
 def main():
@@ -171,6 +193,11 @@ def main():
         time.sleep(3)
         user_request()
     elif choice == '3':
+        os.system('cls' if os.name == 'nt' else 'clear')
+        del_all()
+        time.sleep(3)
+        user_request()
+    elif choice == '4':
         os.system('cls' if os.name == 'nt' else 'clear');
         text = "Blessed Is The Sacred Raven's Eye, And Blessed Are Those Who Know How To Wield Its Power."
         for char in text:
