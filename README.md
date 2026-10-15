@@ -60,4 +60,4 @@ Note:
 
 Updates:
 * Built-in python os library utilized to document findings from both resolving hostnames (or IP Addresses) and port scanning processes locally
-* Additional option included to easily delete all documentation (Option 3)
+* Additional option included to easily delete all documentation easily (Option 3)
