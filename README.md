@@ -4,7 +4,7 @@ Hostname resolver and a port scanner for a given hostname or IP Address from the
 ![Alt text](Images/Screenshot_20261015_011737_Termux.jpg)
 
 Requirements:
-* Ensure the latest version of python is installed in your terminal (python 3.x)
+* Ensure the latest version of python is installed in your terminal (python 3.9+)
 
 Recommendations:
 * Use a VPN while using this tool (Proton or Mullvad are encouraged)
